@@ -1,0 +1,178 @@
+/* library.css */
+
+/* =========================
+   БАЗОВЫЕ НАСТРОЙКИ СТРАНИЦЫ
+   ========================= */
+.library-page {
+    padding: 24px 0 60px;
+    background-color: #F1EDE2;
+}
+
+.library-page .container {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================
+   ЗАГОЛОВОК
+   ========================= */
+.library-header {
+    padding-bottom: 32px;
+}
+
+.library-header h1 {
+    font-family: 'Oranienbaum', Georgia, serif;
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: 400;
+    color: #211B18;
+    margin: 0 0 16px 0;
+}
+
+.library-header__description {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: #655B54;
+}
+
+.library-header__description p {
+    margin: 0;
+}
+
+/* =========================
+   ОБЩИЕ СТИЛИ СЕКЦИЙ
+   ========================= */
+.library-section {
+    margin-bottom: 64px;
+}
+
+.library-section .label {
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    color: #655B54;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   СЕТКА КАРТОЧЕК (DESKTOP)
+   ========================= */
+.library-grid--desktop {
+    display: grid;
+    grid-template-columns: repeat(3, 384px);
+    gap: 24px;
+    justify-content: start;
+}
+
+/* =========================
+   СЕТКА КАРТОЧЕК (MOBILE)
+   ========================= */
+.library-grid--mobile {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    gap: 24px;
+    justify-content: start;
+}
+
+/* =========================
+   СТИЛИ КАРТОЧКИ
+   ========================= */
+.work-card {
+    width: 100%; 
+    height: auto; 
+    padding: 16px;
+    background: #F1EDE2;
+    border: 1px solid #C7BEB2;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease, outline 0.3s ease;
+}
+
+/* Картинка */
+.work-card__image {
+    width: 100%;
+    aspect-ratio: 16 / 10; 
+    height: auto;
+    overflow: hidden;
+    background: #d8d1c4;
+    margin-bottom: 16px;
+    flex-shrink: 0;
+}
+
+.work-card__image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Контент */
+.work-card__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Заголовок */
+.work-card h3 {
+    font-family: 'Oranienbaum', Georgia, serif;
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 400;
+    margin: 0 0 8px 0;
+    color: #211B18;
+}
+
+/* Подзаголовок */
+.work-card p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: #655B54;
+    margin: 0 0 16px 0;
+}
+
+/* Ссылка */
+.work-card__link {
+    margin-top: auto; 
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: #211B18;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* =========================
+   АДАПТИВНОСТЬ (Mobile)
+   ========================= */
+@media (max-width: 768px) {
+    .library-page .container {
+        padding: 0 16px;
+    }
+
+    .library-header h1 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    /* Сетки становятся одноколоночными */
+    .library-grid--desktop,
+    .library-grid--mobile {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* Карточки растягиваются на всю ширину */
+    .work-card {
+        width: 100%;
+        height: auto;
+    }
+}

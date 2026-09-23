@@ -1,0 +1,356 @@
+/* components.css */
+
+/* =========================
+   БАЗОВЫЕ НАСТРОЙКИ СТРАНИЦЫ
+   ========================= */
+.components-page {
+    padding: 24px 0 60px;
+    background-color: #F1EDE2;
+}
+
+/* Ограничение ширины контейнера для этой страницы (по макету ~800px) */
+.components-page .container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================
+   ЗАГОЛОВОК
+   ========================= */
+.components-header {
+    padding-bottom: 24px;
+}
+
+.components-header h1 {
+    font-family: 'Oranienbaum', Georgia, serif;
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: 400;
+    color: #211B18;
+    margin: 0;
+}
+
+.components-header__description {
+    margin-top: 16px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: #655B54;
+}
+
+.components-header__description p {
+    margin: 0;
+}
+
+/* =========================
+   ОБЩИЕ СТИЛИ СЕКЦИЙ
+   ========================= */
+.components-section {
+    margin-bottom: 64px;
+    border-top: 1px solid #C7BEB2;
+    padding-top: 32px;
+}
+
+.components-header + .components-section {
+    border-top: none;
+    padding-top: 0;
+}
+
+.section-title {
+    font-family: 'Oranienbaum', Georgia, serif;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #211B18;
+    margin-bottom: 24px;
+}
+
+/* Метки состояний */
+.label {
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    color: #655B54;
+    text-transform: none;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   БЛОК 1: КНОПКИ
+   ========================= */
+.components-states-labels {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 0;
+}
+
+.components-buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+/* Стиль кнопки */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 218px; 
+    height: 48px;
+    background: #302038;
+    color: #FFFFFF;
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    text-decoration: none;
+    padding: 0 16px;
+    transition: background-color 0.2s ease, outline 0.2s ease;
+    gap: 8px;
+    box-sizing: border-box;
+}
+
+.btn .arrow {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* Состояние Hover */
+.btn.is-hover {
+    background: #211B18;
+    color: #FFFFFF;
+}
+
+/* Состояние Focus-visible */
+.btn.is-focus {
+    outline: 2px solid #302038;
+    outline-offset: 3px;
+}
+
+/* Текст примечания*/
+.components-note {
+    margin-top: 24px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: #655B54;
+}
+.components-note p {
+    margin: 0;
+}
+
+/* =========================
+   БЛОК 2: КАРТОЧКИ
+   ========================= */
+/* Сетка для карточек */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 362px);
+    gap: 24px; 
+    margin-bottom: 24px;
+    justify-content: start;
+}
+
+.cards-grid-focus {
+    display: grid;
+    grid-template-columns: 362px;
+    gap: 24px;
+    justify-content: start; 
+}
+
+/* Обертка карточки */
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 362px; 
+}
+
+/* Сама карточка */
+.work-card {
+    width: 100%; 
+    height: 360px; 
+
+    padding: 16px;
+    background: #F1EDE2;
+
+    border: 1px solid #C7BEB2;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease, outline 0.3s ease;
+}
+
+/* Картинка */
+.work-card__image {
+    width: 100%; 
+    height: auto; 
+    aspect-ratio: 16 / 10; 
+    flex-shrink: 0;
+    overflow: hidden;
+    background: #d8d1c4;
+    margin-bottom: 16px;
+}
+
+.work-card__image img { 
+    width: 100%; 
+    height: 100%; 
+    display: block; 
+    object-fit: cover; 
+    transition: transform 0.4s ease; 
+}
+
+/* Контент */
+.work-card__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-top: 0;
+}
+
+
+.work-card h3 {
+    font-family: 'Oranienbaum', Georgia, serif;
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 400;
+    margin: 0 0 12px 0;
+    color: #211B18;
+    margin-bottom: 12px;
+}
+
+.work-card p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #655B54;
+    margin: 0 0 24px 0;
+    margin-bottom: 16px;
+}
+
+.work-card__link {
+    margin-top: auto; 
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #211B18;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+
+
+/* Состояния карточки */
+.work-card.is-hover {
+    background-color: #E9E3D6;
+}
+.work-card.is-hover .work-card__image img {
+    transform: scale(1.05);
+}
+.work-card.is-hover .work-card__link {
+    text-decoration: underline;
+}
+
+.work-card.is-focus {
+    outline: 2px solid #302038;
+    outline-offset: 3px;
+}
+
+/* =========================
+   БЛОК 3: ТИПОГРАФИКА И ТОКЕНЫ
+   ========================= */
+.typography-info {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: #655B54;
+    margin-bottom: 32px;
+}
+.typography-info p {
+    margin: 0;
+}
+
+/* Сетка цветов */
+.colors-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.color-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.color-swatch {
+    width: 100%;
+    height: 48px;
+    border-radius: 0;
+}
+
+.color-label {
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    color: #655B54;
+}
+
+/* =========================
+   АДАПТИВНОСТЬ (Mobile)
+   ========================= */
+@media (max-width: 768px) {
+    .components-page .container {
+        padding: 0 16px;
+    }
+
+    .components-header h1 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .section-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    /* Сетки становятся одноколоночными */
+    .components-states-labels,
+    .components-buttons-grid,
+    .cards-grid,
+    .cards-grid-focus,
+    .colors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .components-states-labels {
+        display: none;
+    }
+
+    .components-buttons-grid {
+        gap: 32px;
+    }
+    
+    .btn {
+        max-width: 100%;
+    }
+
+    .card-wrapper.empty {
+        display: none;
+    }
+    
+    .work-card {
+        height: auto; 
+        min-height: 380px;
+    }
+    
+    .card-wrapper {
+        max-width: 100%;
+    }
+}

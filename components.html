@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Компоненты и состояния</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+
+    <main class="components-page">
+        <div class="container">
+
+            <!-- ЗАГОЛОВОК -->
+            <section class="components-header"> 
+                <h1>Компоненты и состояния</h1>
+                <div class="components-header__description">
+                    <p>Повторяющиеся элементы — экземпляры компонентов.</p> 
+                    <p>Состояния: default, hover, focus-visible.</p> 
+                </div> 
+            </section>
+
+            <!-- БЛОК 1: КНОПКИ -->
+            <section class="components-section">
+                <!-- Заголовки состояний -->
+                <div class="components-states-labels">
+                    <div class="label">Default</div>
+                    <div class="label">Hover</div>
+                    <div class="label">Focus-visible</div>
+                </div>
+
+                <!-- Кнопки -->
+                <div class="components-buttons-grid">
+                    <!-- Default -->
+                    <a href="#" class="btn">Обсудить проект <span class="arrow">→</span></a>
+                    
+                    <!-- Hover  -->
+                    <a href="#" class="btn is-hover">Обсудить проект <span class="arrow">→</span></a>
+                    
+                    <!-- Focus-visible  -->
+                    <a href="#" class="btn is-focus">Обсудить проект <span class="arrow">→</span></a>
+                </div>
+
+                <div class="components-note">
+                    <p>Карточка: padding 16, gap 12, изображение 16:10.</p>
+                    <p>Hover: фон #E9E3D6. Focus-visible: outline 2 px #302038, offset 3 px.</p>
+                </div>
+            </section>
+
+            <!-- БЛОК 2: КАРТОЧКА (Интерактивные состояния) -->
+            <section class="components-section">
+                <h2 class="section-title">Карточка: интерактивные состояния</h2>
+
+                <!-- Сетка карточек -->
+                <div class="cards-grid">
+                    <!-- Default -->
+                    <div class="card-wrapper">
+                        <div class="label">Default</div>
+                        <div class="work-card">
+                            <div class="work-card__image">
+                                <img src="images/16_10.png" alt="Briskly">
+                            </div>
+                            <div class="work-card__content">
+                                <h3>БРИСКЛИ</h3>
+                                <p>Сайт · Брендинг · Реклама</p>
+                                <a href="#" class="work-card__link">Смотреть проект →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hover -->
+                    <div class="card-wrapper">
+                        <div class="label">Hover</div>
+                        <div class="work-card is-hover">
+                            <div class="work-card__image">
+                                <img src="images/16_10.png"  alt="Briskly">
+                            </div>
+                            <div class="work-card__content">
+                                <h3>БРИСКЛИ</h3>
+                                <p>Сайт · Брендинг · Реклама</p>
+                                <a href="#" class="work-card__link">Смотреть проект →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Focus-visible (отдельная строка, но в той же сетке) -->
+                <div class="cards-grid-focus">
+                    <div class="card-wrapper">
+                        <div class="label">Focus-visible</div>
+                        <div class="work-card is-focus">
+                            <div class="work-card__image">
+                                <img src="images/16_10.png"  alt="Briskly">
+                            </div>
+                            <div class="work-card__content">
+                                <h3>БРИСКЛИ</h3>
+                                <p>Сайт · Брендинг · Реклама</p>
+                                <a href="#" class="work-card__link">Смотреть проект →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- БЛОК 3: ТИПОГРАФИКА И ТОКЕНЫ -->
+            <section class="components-section">
+                <h2 class="section-title">Типографика и токены</h2>
+
+                <!-- Описание шрифтов -->
+                <div class="typography-info">
+                    <p>Oranienbaum Regular / Manrope Regular</p>
+                    <p>H1 desktop 72/76 · mobile 48/60</p>
+                    <p>H2 desktop 48/52 · mobile 32/36</p>
+                    <p>Card title 28/32 · Body 16/26 · Small 14/22 · Label 12/18</p>
+                    <p>Границы 1 px · Радиусы 0 · Button 48 px · Menu 44×44 px</p>
+                </div>
+
+                <!-- Цвета -->
+                <div class="colors-grid">
+                    <!-- Paper -->
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: #F1EDE2; border: 1px solid #C7BEB2;"></div>
+                        <div class="color-label">Paper #F1EDE2</div>
+                    </div>
+                    <!-- Ink -->
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: #211B18;"></div>
+                        <div class="color-label">Ink #211B18</div>
+                    </div>
+                    <!-- Muted -->
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: #655B54;"></div>
+                        <div class="color-label">Muted #655B54</div>
+                    </div>
+                    <!-- Line -->
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: #C7BEB2;"></div>
+                        <div class="color-label">Line #C7BEB2</div>
+                    </div>
+                    <!-- Accent -->
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: #302038;"></div>
+                        <div class="color-label">Accent #302038</div>
+                    </div>
+                    <!-- White -->
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: #FFFFFF; border: 1px solid #C7BEB2;"></div>
+                        <div class="color-label">White #FFFFFF</div>
+                    </div>
+                     <!-- Hover -->
+                     <div class="color-item">
+                        <div class="color-swatch" style="background: #E9E3D6;"></div>
+                        <div class="color-label">Hover #E9E3D6</div>
+                    </div>
+                </div>
+
+                <div class="components-note" style="margin-top: 32px;">
+                    <p>Наведения и email: hover — underline; focus-visible — outline 2 px, offset 3 px.</p>
+                    <p>Карточка целиком — одна ссылка. Не вкладывайте в неё другую ссылку или кнопку.</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+</body>
+</html>
